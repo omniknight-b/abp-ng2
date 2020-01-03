@@ -1,0 +1,87 @@
+<div nz-row nzGutter="6">
+    <div nz-col nzSpan="24">
+        <nz-card nzTitle="Users">
+            <div nz-col nzSpan="24">
+                <form nz-form nzLayout="inline">
+                    <nz-form-item>
+                        <nz-form-label>keyword</nz-form-label>
+                        <nz-form-control>
+                            <input nz-input name="keyword" />
+                        </nz-form-control>
+                    </nz-form-item>
+
+                    <nz-form-item>
+                        <nz-form-label>isActive</nz-form-label>
+                        <nz-form-control>
+                            <nz-select style="width: 200px;" nzPlaceHolder="IsActive" name="isActive">
+                                <nz-option nzLabel="Yes" nzValue="true"></nz-option>
+                                <nz-option nzLabel="No" nzValue="false"></nz-option>
+                            </nz-select>
+                        </nz-form-control>
+                    </nz-form-item>
+
+                    <nz-form-item>
+                        <nz-form-control>
+                            <button nz-button nzType="primary">Search</button>
+                        </nz-form-control>
+                    </nz-form-item>
+
+                    <nz-form-item>
+                        <nz-form-control>
+                            <button nz-button nzType="default">Reset</button>
+                        </nz-form-control>
+                    </nz-form-item>
+
+                    <nz-form-item>
+                        <nz-form-control>
+                            <button nz-button nzType="primary">
+                                <i nz-icon nzType="plus"></i>Add</button>
+                        </nz-form-control>
+                    </nz-form-item>
+
+                </form>
+            </div>
+
+            <div nz-col nzSpan="24" class="table-wrapper">
+                <!--datatable-->
+                <nz-table [nzData]="users" [nzTotal]="totalItems" [(nzPageIndex)]="pageNumber"
+                    [nzLoading]="isTableLoading" nzFrontPagination="false" (nzPageIndexChange)="getDataPage($event)"
+                    [(nzPageSize)]="pageSize" nzShowSizeChanger="true" (nzPageSizeChange)="pageSizeChange($event)">
+                    <thead>
+                        <tr>
+                            <th>UserName</th>
+                            <th>FullName</th>
+                            <th>EmailAddress</th>
+                            <th>IsActive</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of users">
+                            <td>{{ user.userName }}</td>
+                            <td>{{ user.fullName }}</td>
+                            <td>{{ user.emailAddress }}</td>
+                            <td>
+                                <nz-badge nzColor="blue" nzText="启用" *ngIf="user.isActive"></nz-badge>
+                                <nz-badge nzStatus="error" nzText="未启用" *ngIf="!user.isActive"></nz-badge>
+                            </td>
+                            <td>
+
+                                <a nz-dropdown [nzDropdownMenu]="menu">
+                                    <i nz-icon nzType="menu" nzTheme="outline"></i>
+                                </a>
+                                <nz-dropdown-menu #menu="nzDropdownMenu">
+                                    <ul nz-menu>
+                                        <li nz-menu-item>Edit</li>
+                                        <li nz-menu-item>Delete</li>
+                                        <li nz-menu-item>ResetPassword</li>
+                                    </ul>
+                                </nz-dropdown-menu>
+                            </td>
+                        </tr>
+                    </tbody>
+                </nz-table>
+            </div>
+        </nz-card>
+    </div>
+</div>
