@@ -14,12 +14,13 @@
     "typeRoots": [
       "../node_modules/@types"
     ],
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
-      "@abp/*": ["../node_modules/abp-ng2-module/dist/src/*"],
-      "@app/*": ["./app/*"],
-      "@shared/*": ["./shared/*"],
-      "@node_modules/*": ["../node_modules/*"]
+      "@abp/*": ["./node_modules/abp-ng2-module/dist/src/*"],
+      "@app/*": ["./src/app/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@account":["./src/account/*"],
+      "@node_modules/*": ["./node_modules/*"]  
     }
   },
   "exclude": [

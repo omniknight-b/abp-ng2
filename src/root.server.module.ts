@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { ServerModule } from '@angular/platform-server';
 import { ModuleMapLoaderModule } from '@nguniversal/module-map-ngfactory-loader';
 
-import { RootModule } from 'root.module';
-import { RootComponent } from 'root.component';
+import { RootModule } from './root.module';
+import { RootComponent } from './root.component';
 
 // 引入必要的模块
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';

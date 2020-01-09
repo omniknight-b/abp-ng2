@@ -15,10 +15,7 @@ module.exports = {
   module: {
     rules: [{
       test: /\.ts$/,
-      loader: 'ts-loader',
-      options: {
-        configFile: path.resolve(__dirname, 'src/tsconfig.json')
-      }
+      loader: 'ts-loader'
     }]
   },
   plugins: [
