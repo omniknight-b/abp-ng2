@@ -37,7 +37,8 @@
             ],
             "styles": [
               "./src/assets/css/common.less",
-              "./src/assets/theme/style.less"
+              "./src/assets/theme/style.less",
+              "node_modules/famfamfam-flags/dist/sprite/famfamfam-flags.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
@@ -77,21 +78,21 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "CMS:build"
+            "browserTarget": "abp-ng2:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "CMS:build:production"
+              "browserTarget": "abp-ng2:build:production"
             },
             "hmr": {
-              "browserTarget": "CMS:build:hmr"
+              "browserTarget": "abp-ng2:build:hmr"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "CMS:build"
+            "browserTarget": "abp-ng2:build"
           }
         },
         "test": {
@@ -150,7 +151,7 @@
       }
     }
   },
-  "defaultProject": "CMS",
+  "defaultProject": "abp-ng2",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",

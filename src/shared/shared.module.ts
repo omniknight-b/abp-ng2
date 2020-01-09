@@ -8,9 +8,10 @@ import { AppAuthService } from './auth/app-auth.service';
 import { AppRouteGuard } from './auth/auth-route-guard';
 import { LocalizePipe } from '@shared/pipes/localize.pipe';
 import { AppLayoutComponent } from './layout/app-layout/app-layout.component';
-import { NgZorroAntdModule } from 'ng-zorro-antd'
+import { NgZorroAntdModule } from 'ng-zorro-antd';
 
 import { AbpMessageService } from '@shared/abp-message.service';
+import { LanguagesComponent } from './layout/languages/languages.component';
 
 @NgModule({
     imports: [
@@ -21,11 +22,13 @@ import { AbpMessageService } from '@shared/abp-message.service';
     ],
     declarations: [
         LocalizePipe,
-        AppLayoutComponent
+        AppLayoutComponent,
+        LanguagesComponent
     ],
     exports: [
         LocalizePipe,
-        AppLayoutComponent
+        AppLayoutComponent,
+        LanguagesComponent
     ]
 })
 export class SharedModule {

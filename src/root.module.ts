@@ -87,7 +87,7 @@ export function convertAbpLocaleToAngularLocale(locale: string): string {
 }
 
 export function shouldLoadLocale(): boolean {
-    return abp.localization.currentLanguage.name && abp.localization.currentLanguage.name !== 'zh-CN';
+    return abp.localization.currentLanguage.name && abp.localization.currentLanguage.name !== 'zh-Hans';
 }
 
 export function getRemoteServiceBaseUrl(): string {
@@ -98,9 +98,8 @@ export function getCurrentLanguage(): string {
     if (abp.localization.currentLanguage.name) {
         return abp.localization.currentLanguage.name;
     }
-
     // todo: Waiting for https://github.com/angular/angular/issues/31465 to be fixed.
-    return 'en';
+    return 'zh-Hans';
 }
 
 @NgModule({

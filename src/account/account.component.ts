@@ -1,5 +1,4 @@
-import { Component, ViewContainerRef, OnInit, ViewEncapsulation, Injector } from '@angular/core';
-import { LoginService } from './login/login.service';
+import { Component, OnInit, ViewEncapsulation, Injector } from '@angular/core';
 import { AppComponentBase } from '@shared/app-component-base';
 
 @Component({
@@ -14,11 +13,9 @@ export class AccountComponent extends AppComponentBase implements OnInit {
     versionText: string;
     currentYear: number;
 
-    private viewContainerRef: ViewContainerRef;
 
     public constructor(
-        injector: Injector,
-        private _loginService: LoginService
+        injector: Injector
     ) {
         super(injector);
 
@@ -31,6 +28,5 @@ export class AccountComponent extends AppComponentBase implements OnInit {
     }
 
     ngOnInit(): void {
-        $('body').addClass('login-page');
     }
 }
