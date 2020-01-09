@@ -1,10 +1,26 @@
 {
     "typescript.tsdk": "node_modules\\typescript\\lib",
     "cSpell.words": [
+        "Antd",
         "Avenir",
+        "Consts",
+        "Mapings",
+        "aliyun",
+        "angularclass",
         "antialiased",
+        "appconfig",
+        "aspnet",
+        "codelyzer",
+        "devkit",
+        "eofline",
+        "iana",
         "jsbi",
+        "ngfactory",
+        "nguniversal",
+        "nswag",
+        "pree",
         "sider",
+        "signalr",
         "submenu"
     ]
 }
