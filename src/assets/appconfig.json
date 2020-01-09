@@ -1,5 +1,5 @@
 {
-  "remoteServiceBaseUrl": "http://121.199.45.239:8002",
+  "remoteServiceBaseUrl": "https://api.abp.wheelcode.info",
   "appBaseUrl": "http://localhost:4201",
   "localeMappings": [
     {
