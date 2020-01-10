@@ -1,43 +1,41 @@
-﻿<div nz-row>
-    <div nz-col nzPush="8" nzSm="24" nzSpan="8" nzMd="8">
-        <div nz-row class="login-box">
-            <div nz-col nzSm="24" nzXs="24" nzMd="14" nzLg="14" nzSpan="14">
-                <div class="card">
-                    <h2>Login</h2>
-                    <p>Sign In to your account</p>
-                    <form nz-form nzLayout="horizontal" [formGroup]="loginForm">
-                        <nz-form-item>
-                            <nz-input-group nzPrefixIcon="user">
-                                <input type="text" nz-input placeholder="Username"
-                                    formControlName="userNameOrEmailAddress" name="userNameOrEmailAddress" />
-                            </nz-input-group>
-                        </nz-form-item>
+﻿<div nz-col nzSpan="24">
+    <div nz-row class="login-box" nzType="flex" nzAlign="middle" nzJustify="center">
+        <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="14">
+            <div class="card">
+                <h2>Login</h2>
+                <p>Sign In to your account</p>
+                <form nz-form nzLayout="horizontal" [formGroup]="loginForm">
+                    <nz-form-item>
+                        <nz-input-group nzPrefixIcon="user">
+                            <input type="text" nz-input placeholder="Username" formControlName="userNameOrEmailAddress"
+                                name="userNameOrEmailAddress" />
+                        </nz-input-group>
+                    </nz-form-item>
 
-                        <nz-form-item>
-                            <nz-input-group nzPrefixIcon="lock">
-                                <input type="password" nz-input placeholder="Password" formControlName="password"
-                                    name="password" />
-                            </nz-input-group>
-                        </nz-form-item>
+                    <nz-form-item>
+                        <nz-input-group nzPrefixIcon="lock">
+                            <input type="password" nz-input placeholder="Password" formControlName="password"
+                                name="password" />
+                        </nz-input-group>
+                    </nz-form-item>
 
-                        <nz-form-item>
-                            <nz-form-control>
-                                <button nz-button nzType="primary" (click)="login()" [nzLoading]="submitting">Log
-                                    in</button>
-                                <a class="pull-right">Forgot password</a>
-                            </nz-form-control>
-                        </nz-form-item>
-                    </form>
-                </div>
+                    <nz-form-item>
+                        <nz-form-control>
+                            <button nz-button nzType="primary" (click)="login()" [nzLoading]="submitting">Log
+                                in</button>
+                            <a class="pull-right">Forgot password</a>
+                        </nz-form-control>
+                    </nz-form-item>
+                </form>
             </div>
+        </div>
 
-            <div nz-col nzSm="0" nzXs="0" nzSpan="10" nzMd="10" nzLg="10">
-                <div class="text-center card card-primary">
-                    <h2>Sign up</h2>
-                    <p>This is a abp template base on angular, you can use an account with userName as 'admin' password
-                        as '123qwe' to learn more! </p>
-                    <button nz-button nzGhost="true" nzType="primary">Register Now!</button>
-                </div>
+        <div nz-col nzXs="0" nzSm="0" nzMd="0" nzLg="10">
+            <div class="text-center card card-primary">
+                <h2>Sign up</h2>
+                <p>This is a abp template base on angular, you can use an account with userName as 'admin' password
+                    as '123qwe' to learn more! </p>
+                <button nz-button nzGhost="true" nzType="primary">Register Now!</button>
             </div>
         </div>
     </div>

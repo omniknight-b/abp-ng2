@@ -28,7 +28,7 @@ export abstract class AppComponentBase {
         this.setting = injector.get(SettingService);
         this.message = injector.get(NzMessageService);
         this.multiTenancy = injector.get(AbpMultiTenancyService);
-        this.appSession = injector.get(AppSessionService)
+        this.appSession = injector.get(AppSessionService);
     }
 
     l(key: string, ...args: any[]): string {

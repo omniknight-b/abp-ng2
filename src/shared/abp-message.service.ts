@@ -11,33 +11,33 @@ export class AbpMessageService {
 
     init() {
         abp.message.info = (message, title) => {
-            const dispalyTitle = title == null ? message : title;
+            const displayTitle = title == null ? message : title;
             this._modalService.info({
-                nzTitle: dispalyTitle,
+                nzTitle: displayTitle,
                 nzContent: message
             });
         };
 
         abp.message.success = (message, title) => {
-            const dispalyTitle = title == null ? message : title;
+            const displayTitle = title == null ? message : title;
             this._modalService.success({
-                nzTitle: dispalyTitle,
+                nzTitle: displayTitle,
                 nzContent: message
             });
         };
 
         abp.message.warn = (message, title) => {
-            const dispalyTitle = title == null ? message : title;
+            const displayTitle = title == null ? message : title;
             this._modalService.warning({
-                nzTitle: dispalyTitle,
+                nzTitle: displayTitle,
                 nzContent: message
             });
         };
 
         abp.message.error = (message, title) => {
-            const dispalyTitle = title == null ? message : title;
+            const displayTitle = title == null ? message : title;
             this._modalService.error({
-                nzTitle: dispalyTitle,
+                nzTitle: displayTitle,
                 nzContent: message
             });
         };
